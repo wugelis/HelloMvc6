@@ -4,13 +4,62 @@
   "projectFileDependencyGroups": {
     "": [
       "Microsoft.AspNet.Mvc >= 6.0.0-beta4",
+      "Microsoft.AspNet.Mvc.TagHelpers >= 6.0.0-beta4",
       "Microsoft.AspNet.Server.IIS >= 1.0.0-beta4",
-      "Microsoft.AspNet.Server.WebListener >= 1.0.0-beta4"
+      "Microsoft.AspNet.Server.WebListener >= 1.0.0-beta4",
+      "Kestrel >= 1.0.0-beta4"
     ],
     "DNX,Version=v4.5.1": [],
     "DNXCore,Version=v5.0": []
   },
   "libraries": {
+    "Kestrel/1.0.0-beta4": {
+      "serviceable": false,
+      "sha": "8f2aCgtDh5ONWS7K2EYy23s3nnPvZS7rPimYHJ1DAvF7HG5GSmSC+SkKx6ZtBOjhU9agneWjDwj5jGjdPWfjsA==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "Microsoft.AspNet.Hosting": "1.0.0-beta4",
+            "Microsoft.AspNet.Server.Kestrel": "1.0.0-beta4"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/Kestrel.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/Kestrel.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "Microsoft.AspNet.Hosting": "1.0.0-beta4",
+            "Microsoft.AspNet.Server.Kestrel": "1.0.0-beta4",
+            "System.Runtime": "4.0.20-beta-22816"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/dnxcore50/Kestrel.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnxcore50/Kestrel.dll"
+          ]
+        }
+      },
+      "files": [
+        "Kestrel.1.0.0-beta4.nupkg",
+        "Kestrel.1.0.0-beta4.nupkg.sha512",
+        "Kestrel.nuspec",
+        "lib/dnx451/Kestrel.dll",
+        "lib/dnx451/Kestrel.xml",
+        "lib/dnxcore50/Kestrel.dll",
+        "lib/dnxcore50/Kestrel.xml"
+      ]
+    },
     "Microsoft.AspNet.Authentication/1.0.0-beta4": {
       "serviceable": true,
       "sha": "bF++RlseLYrzDjtzrwNsLlftnj65Gctg6AkW6QMmk3W5EcNCktynbfjZrAn/1JRr7jri5XAJ546kvoayYKMjEg==",
@@ -1339,6 +1388,56 @@
         "lib/net45/Microsoft.AspNet.Mvc.Razor.Host.xml"
       ]
     },
+    "Microsoft.AspNet.Mvc.TagHelpers/6.0.0-beta4": {
+      "serviceable": true,
+      "sha": "dVEBjDAexHcb/pszgtbjG5ayDPZBSuppYB76gKGRAVZTdIOK1Ha9PLBU6417kbEq9tTlxIk0t4EHyOE2OLJrdw==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "Microsoft.AspNet.Mvc.Razor": "6.0.0-beta4",
+            "Microsoft.Framework.Caching.Memory": "1.0.0-beta4",
+            "Microsoft.Framework.FileSystemGlobbing": "1.0.0-beta4",
+            "System.Security.Cryptography.Hashing.Algorithms": "4.0.0-beta-22816"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/Microsoft.AspNet.Mvc.TagHelpers.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/Microsoft.AspNet.Mvc.TagHelpers.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "Microsoft.AspNet.Mvc.Razor": "6.0.0-beta4",
+            "Microsoft.Framework.Caching.Memory": "1.0.0-beta4",
+            "Microsoft.Framework.FileSystemGlobbing": "1.0.0-beta4",
+            "System.Security.Cryptography.Hashing.Algorithms": "4.0.0-beta-22816"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/dnxcore50/Microsoft.AspNet.Mvc.TagHelpers.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnxcore50/Microsoft.AspNet.Mvc.TagHelpers.dll"
+          ]
+        }
+      },
+      "files": [
+        "Microsoft.AspNet.Mvc.TagHelpers.6.0.0-beta4.nupkg",
+        "Microsoft.AspNet.Mvc.TagHelpers.6.0.0-beta4.nupkg.sha512",
+        "Microsoft.AspNet.Mvc.TagHelpers.nuspec",
+        "lib/dnx451/Microsoft.AspNet.Mvc.TagHelpers.dll",
+        "lib/dnx451/Microsoft.AspNet.Mvc.TagHelpers.xml",
+        "lib/dnxcore50/Microsoft.AspNet.Mvc.TagHelpers.dll",
+        "lib/dnxcore50/Microsoft.AspNet.Mvc.TagHelpers.xml"
+      ]
+    },
     "Microsoft.AspNet.PageExecutionInstrumentation.Interfaces/1.0.0-beta4": {
       "serviceable": true,
       "sha": "rKcHwgcdJlYxum4ZDc3BktlXEjCEDimBM4YThJ78a5VxnZDLMxwublkaq6ekHPwg5SSMuzNcFQnb+5u1KAF/Jg==",
@@ -1562,6 +1661,68 @@
         "Microsoft.AspNet.Server.IIS.1.0.0-beta4.nupkg",
         "Microsoft.AspNet.Server.IIS.1.0.0-beta4.nupkg.sha512",
         "Microsoft.AspNet.Server.IIS.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.Server.Kestrel/1.0.0-beta4": {
+      "serviceable": false,
+      "sha": "q1UkQB67PymuTryvL3i35vyZAt6ZToQdS+3rYlgqmpDMg4JdduhhtdvWj6H3R6TlBaOnF8zJn2TvlQlzQEkfzw==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "Microsoft.Framework.Runtime.Interfaces": "1.0.0-beta4"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/Microsoft.AspNet.Server.Kestrel.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/Microsoft.AspNet.Server.Kestrel.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "Microsoft.Framework.Runtime.Interfaces": "1.0.0-beta4",
+            "System.Collections": "4.0.10-beta-22816",
+            "System.Diagnostics.Debug": "4.0.10-beta-22816",
+            "System.Diagnostics.TraceSource": "4.0.0-beta-22816",
+            "System.Diagnostics.Tracing": "4.0.20-beta-22816",
+            "System.Globalization": "4.0.10-beta-22816",
+            "System.IO": "4.0.10-beta-22816",
+            "System.Linq": "4.0.0-beta-22816",
+            "System.Net.Primitives": "4.0.10-beta-22816",
+            "System.Runtime.Extensions": "4.0.10-beta-22816",
+            "System.Runtime.InteropServices": "4.0.20-beta-22816",
+            "System.Text.Encoding": "4.0.10-beta-22816",
+            "System.Threading": "4.0.10-beta-22816",
+            "System.Threading.Tasks": "4.0.10-beta-22816",
+            "System.Threading.Thread": "4.0.0-beta-22816",
+            "System.Threading.ThreadPool": "4.0.10-beta-22816"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/dnxcore50/Microsoft.AspNet.Server.Kestrel.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnxcore50/Microsoft.AspNet.Server.Kestrel.dll"
+          ]
+        }
+      },
+      "files": [
+        "Microsoft.AspNet.Server.Kestrel.1.0.0-beta4.nupkg",
+        "Microsoft.AspNet.Server.Kestrel.1.0.0-beta4.nupkg.sha512",
+        "Microsoft.AspNet.Server.Kestrel.nuspec",
+        "lib/dnx451/Microsoft.AspNet.Server.Kestrel.dll",
+        "lib/dnx451/Microsoft.AspNet.Server.Kestrel.xml",
+        "lib/dnxcore50/Microsoft.AspNet.Server.Kestrel.dll",
+        "lib/dnxcore50/Microsoft.AspNet.Server.Kestrel.xml",
+        "native/darwin/universal/libuv.dylib",
+        "native/windows/amd64/libuv.dll",
+        "native/windows/x86/libuv.dll"
       ]
     },
     "Microsoft.AspNet.Server.WebListener/1.0.0-beta4": {
@@ -2142,6 +2303,54 @@
         "lib/net45/Microsoft.Framework.DependencyInjection.Interfaces.xml",
         "lib/portable-net451+win81+wpa81/Microsoft.Framework.DependencyInjection.Interfaces.dll",
         "lib/portable-net451+win81+wpa81/Microsoft.Framework.DependencyInjection.Interfaces.xml"
+      ]
+    },
+    "Microsoft.Framework.FileSystemGlobbing/1.0.0-beta4": {
+      "serviceable": false,
+      "sha": "H9MTpDPDRfs1BxlOfdjgsb8uwN3xY+zYeSiyStuXjWFyhA5oc/y13+/QhMj0ev/XSCy8apJsMO1AZfTU5yAH6Q==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {},
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/Microsoft.Framework.FileSystemGlobbing.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/Microsoft.Framework.FileSystemGlobbing.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.Runtime": "4.0.20-beta-22816",
+            "System.Collections": "4.0.10-beta-22816",
+            "System.IO.FileSystem": "4.0.0-beta-22816",
+            "System.Linq": "4.0.0-beta-22816",
+            "System.Runtime.Extensions": "4.0.10-beta-22816"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/dnxcore50/Microsoft.Framework.FileSystemGlobbing.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnxcore50/Microsoft.Framework.FileSystemGlobbing.dll"
+          ]
+        }
+      },
+      "files": [
+        "Microsoft.Framework.FileSystemGlobbing.1.0.0-beta4.nupkg",
+        "Microsoft.Framework.FileSystemGlobbing.1.0.0-beta4.nupkg.sha512",
+        "Microsoft.Framework.FileSystemGlobbing.nuspec",
+        "lib/dnx451/Microsoft.Framework.FileSystemGlobbing.dll",
+        "lib/dnx451/Microsoft.Framework.FileSystemGlobbing.xml",
+        "lib/dnxcore50/Microsoft.Framework.FileSystemGlobbing.dll",
+        "lib/dnxcore50/Microsoft.Framework.FileSystemGlobbing.xml",
+        "lib/net45/Microsoft.Framework.FileSystemGlobbing.dll",
+        "lib/net45/Microsoft.Framework.FileSystemGlobbing.xml"
       ]
     },
     "Microsoft.Framework.Logging/1.0.0-beta4": {
@@ -3453,6 +3662,48 @@
         "lib/contract/System.Diagnostics.TraceSource.dll",
         "lib/net45/System.Diagnostics.TraceSource.dll",
         "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.Diagnostics.TraceSource.dll"
+      ]
+    },
+    "System.Diagnostics.Tracing/4.0.20-beta-22816": {
+      "serviceable": false,
+      "sha": "QhlAuKzQaBpb5kwT//6+MKYlmofG8QLurQvKyVF89ZTLLd3WhXHM5QxWNcjyJ9OA/svNPuqW3ee8Hw9lhzcnGQ==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "System.Runtime": "4.0.20-beta-22816"
+          },
+          "frameworkAssemblies": [
+            "mscorlib"
+          ],
+          "runtimeAssemblies": [
+            "lib/net45/System.Diagnostics.Tracing.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net45/System.Diagnostics.Tracing.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.Runtime": "4.0.20-beta-22816"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Diagnostics.Tracing.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Diagnostics.Tracing.dll"
+          ]
+        }
+      },
+      "files": [
+        "License.rtf",
+        "System.Diagnostics.Tracing.4.0.20-beta-22816.nupkg",
+        "System.Diagnostics.Tracing.4.0.20-beta-22816.nupkg.sha512",
+        "System.Diagnostics.Tracing.nuspec",
+        "lib/aspnetcore50/System.Diagnostics.Tracing.dll",
+        "lib/contract/System.Diagnostics.Tracing.dll",
+        "lib/net45/System.Diagnostics.Tracing.dll",
+        "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.Diagnostics.Tracing.dll"
       ]
     },
     "System.Dynamic.Runtime/4.0.10-beta-22816": {

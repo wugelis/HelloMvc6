@@ -1,0 +1,9 @@
+{
+    "version": "1.0.0",
+    "name": "ASPNET5EmptyWebApp1",
+    "private": true,
+    "devDependencies": {
+        "gulp": "3.8.11",
+        "rimraf": "2.2.8"
+    }
+}
